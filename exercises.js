@@ -234,7 +234,13 @@ var moreThanTenLetters = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(arr){
+  var product = 1;
+  for(var i = 0; i < arr.length; i++){
+    product *= arr[i];
+  }
+  return product;
+};
 
 /* #getKeys
  *
@@ -243,7 +249,9 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function(obj){
+  return Object.keys(obj);
+};
 
 /* #sumAllPositive
  *
@@ -252,7 +260,15 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function(arr){
+  var count = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      count += arr[i];
+    }
+  }
+  return count;
+};
 
 /* #stringCountBelowThree
  *
@@ -261,7 +277,15 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function(arr){
+  var count = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].length <= 3){
+      count+=1;
+    }
+  }
+  return count;
+};
 
 /* #countObjects
  *
@@ -270,7 +294,10 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function(arr){
+  var length = arr.length;
+  return length;
+};
 
 /* #getObjectKeys
  *
@@ -279,7 +306,9 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys = function(obj){
+  return Object.keys(obj);
+};
 
 /* #getObjectValues
  *
@@ -288,7 +317,13 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function(obj){
+  var newArr=[];
+  for(var value in obj){
+    newArr.push(obj[value]);
+  }
+  return newArr;
+};
 
 /* #makeObject
  *
@@ -298,7 +333,11 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+var makeObject = function(key,value){
+  var newObj = {};
+  newObj[key] = value;
+  return newObj;
+};
 
 /* #makeObjectReverse
  *
@@ -308,7 +347,11 @@ var makeObject;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+var makeObjectReverse = function(value, key){
+  var newObj = {};
+  newObj[key] = value;
+  return newObj;
+};
 
 /* #tupleToObject
  *
@@ -317,7 +360,11 @@ var makeObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+var tupleToObject = function(arr){
+  var newObj = {};
+  newObj[arr[0]] = arr[1];
+  return newObj;
+};
 
 /* #tupleToObjectReverse
  *
@@ -326,7 +373,11 @@ var tupleToObject;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObjectReverse;
+var tupleToObjectReverse = function(arr){
+  var newObj = {};
+  newObj[arr[1]] = arr[0];
+  return newObj;
+};
 
 /* #strToKeys
  *
@@ -335,7 +386,13 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+var strToKeys = function(arr){
+  var newObj = {};
+  for(var i = 0; i < arr.length; i++){
+    newObj[arr[i]] = 0;
+  }
+  return newObj;
+};
 
 /* #getValues
  *
@@ -344,7 +401,13 @@ var strToKeys;
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+var getValues = function(obj){
+  var newArr = [];
+  for(var value in obj){
+    newArr.push(obj[value]);
+  }
+  return newArr;
+};
 
 /* #getKeys
  *
@@ -353,7 +416,9 @@ var getValues;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function(obj){
+  return Object.keys(obj);
+};
 
 /* #objectToArray
  *
@@ -481,20 +546,20 @@ module.exports = {
   lengthOfLast: lengthOfLast,
   sumBelowTen: sumBelowTen,
   moreThanTenLetters: moreThanTenLetters,
-  multiplyAll: null,
-  getKeys: null,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
-  countObjects: null,
-  getObjectKeys: null,
-  getObjectValues: null,
-  makeObject: null,
-  makeObjectReverse: null,
-  tupleToObject: null,
-  tupleToObjectReverse: null,
-  strToKeys: null,
-  getValues: null,
-  getKeys: null,
+  multiplyAll: multiplyAll,
+  getKeys: getKeys,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
+  getObjectValues: getObjectValues,
+  makeObject: makeObject,
+  makeObjectReverse: makeObjectReverse,
+  tupleToObject: tupleToObject,
+  tupleToObjectReverse: tupleToObjectReverse,
+  strToKeys: strToKeys,
+  getValues: getValues,
+  getKeys: getKeys,
   objectToArray: null,
   arrayToObject: null,
   arraysToObject: null,
