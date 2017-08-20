@@ -1,12 +1,5 @@
 
-var person = {
-  name: "brendan",
-  age: 26,
-  city: "Pearl city"
-};
 
-var tanks = ["Rein", "Zarya", "Orisa", "Roadhog"];
-var DPS = ["soldier 76", "tracer", "reaper", "doomfist"];
 
 
 /* #doubleArray
@@ -472,7 +465,7 @@ var arraysToObject = function(arr1, arr2){
   }
   return newObj;
 };
-console.log(arraysToObject(tanks,DPS));
+
 
 /* #objectsToTuples
  *
